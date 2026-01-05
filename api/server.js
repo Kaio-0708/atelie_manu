@@ -1,8 +1,8 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const Stripe = require('stripe');
-const axios = require('axios');
-const cors = require('cors');
+const express = require("express");
+const dotenv = require("dotenv");
+const Stripe = require("stripe");
+const axios = require("axios");
+const cors = require("cors");
 const path = require("path");
 
 dotenv.config();
@@ -20,9 +20,9 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.post("/api/create-checkout-session", async (req, res) => {
   const items = req.body.items;
 
-  const lineItems = items.map(item => ({
+  const lineItems = items.map((item) => ({
     price_data: {
-      currency: 'brl',
+      currency: "brl",
       product_data: {
         name: item.name,
       },
@@ -33,11 +33,11 @@ app.post("/api/create-checkout-session", async (req, res) => {
 
   try {
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      mode: 'payment',
+      payment_method_types: ["card"],
+      mode: "payment",
       line_items: lineItems,
-      success_url: 'https://atelie-manu.vercel.app/success.html',
-      cancel_url: 'https://atelie-manu.vercel.app/cancel.html',
+      success_url: "https://atelie-manu.vercel.app/success.html",
+      cancel_url: "https://atelie-manu.vercel.app/cancel.html",
     });
 
     res.json({ id: session.id });
@@ -46,7 +46,13 @@ app.post("/api/create-checkout-session", async (req, res) => {
     res.status(500).json({ error: "Erro ao criar sessão" });
   }
 });
-
+/* privar número do wpp
+app.get("/api/whatsapp-link", (req, res) => {
+  const number = process.env.WHATSAPP_NUMBER;
+  const link = `https://wa.me/${number}`;
+  res.json({ link });
+});
+*/
 module.exports = app;
 
 /*const PORT = process.env.PORT || 3000;

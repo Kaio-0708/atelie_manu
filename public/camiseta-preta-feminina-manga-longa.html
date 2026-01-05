@@ -56,6 +56,11 @@
     <a href="endereco.html" style="background-color: #d3a826;" class="px-4 py-1 rounded-lg hover:bg-amber-500 transition-colors duration-300" id="localizacao-btn">
         <span class="text-black font-medium">Endereço</span>
     </a>
+
+    <!-- Botão Dúvidas -->
+    <a href="duvidas.html" style="background-color: #d3a826;" class="px-4 py-1 rounded-lg hover:bg-amber-500 transition-colors duration-300" id="localizacao-btn">
+        <span class="text-black font-medium">Dúvidas</span>
+    </a>
 </div>
         </div>
     </header>
@@ -66,18 +71,25 @@
 
 <!-- Seção de fotos em tamanho grande para mobile -->
 <div class="w-full overflow-hidden md:hidden">
-    <div class="flex snap-x snap-mandatory overflow-x-auto gap-2 px-2">
-        <div class="flex-shrink-0 snap-start w-full">
-            <img src="./Assets/preta f/Captura_de_tela_2025-05-12_211911-removebg-preview.png" 
-                 class="w-full h-auto object-cover rounded-md"
-                 alt="Detalhe da Camiseta Preta Feminina - Frente">
-        </div>
-        <div class="flex-shrink-0 snap-start w-full">
-            <img src="./Assets/preta f/Captura_de_tela_2025-05-12_211916-removebg-preview.png" 
-                 class="w-full h-auto object-cover rounded-md"
-                 alt="Detalhe da Camiseta Preta Feminina Manga longa - Costas">
-        </div>
+  <div class="flex snap-x snap-mandatory overflow-x-auto gap-2 px-2">
+
+    <div class="flex-shrink-0 snap-start w-full">
+      <img 
+        src="./Assets/preta f/Captura_de_tela_2025-05-12_211911-removebg-preview.png"
+        data-zoom="./Assets/preta f/Captura_de_tela_2025-05-12_211911-removebg-preview.png"
+        class="zoom-img w-full h-auto object-cover rounded-md cursor-zoom-in"
+        alt="Detalhe da Camiseta Preta Feminina - Frente">
     </div>
+
+    <div class="flex-shrink-0 snap-start w-full">
+      <img 
+        src="./Assets/preta f/Captura_de_tela_2025-05-12_211916-removebg-preview.png"
+        data-zoom="./Assets/preta f/Captura_de_tela_2025-05-12_211916-removebg-preview.png"
+        class="zoom-img w-full h-auto object-cover rounded-md cursor-zoom-in"
+        alt="Detalhe da Camiseta Preta Feminina Manga longa - Costas">
+    </div>
+
+  </div>
 </div>
 
 <!-- Descrição do produto -->
@@ -99,6 +111,9 @@
     </p>
     <p class="text-green-600 font-semibold text-lg text-center mt-4">
         <i class="fas fa-store-alt mr-2"></i> Retirada na loja em até 5 dias úteis
+    </p>
+    <p class="text-green-600 font-semibold text-lg text-center mt-4">
+        <i class="fas fa-store-alt mr-2"></i> Entrega em até 5 dias úteis
     </p>
 </div>
 
@@ -141,6 +156,7 @@
         <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
         <div id="cart-items" class="flex justify-between mb-2 flex-col overflow-y-auto"></div>
             <p class="font-bold">Total: <span id="cart-total">R$ 0.00</span></p>
+            <p id="order-id" class="font-bold mb-4 text-lg"></p>
             <p class="font-bold mt-4">Nome</p>
             <input
                 type="text"
@@ -183,6 +199,28 @@
         <p class="text-red-500 hidden" id="email-warn">
             Digite um e-mail válido!
         </p>
+        <p class="font-bold mt-4">Forma de entrega:</p>
+
+       <div id="delivery-options" class="flex flex-col gap-2 mt-2">
+            <label class="flex items-center gap-2 border-2 rounded p-2 cursor-pointer hover:bg-gray-100">
+                <input type="radio" name="delivery" value="retirada_loja" class="accent-green-500">
+                Retirar na loja (R$ 00.00)
+            </label>
+
+            <label class="flex items-center gap-2 border-2 rounded p-2 cursor-pointer hover:bg-gray-100">
+                 <input type="radio" name="delivery" value="entrega_campina_grande" class="accent-green-500">
+                 Entrega na cidade de Campina Grande (R$ 10.00)
+            </label>
+
+            <label class="flex items-center gap-2 border-2 rounded p-2 cursor-pointer hover:bg-gray-100">
+                 <input type="radio" name="delivery" value="entrega_fora_campina" class="accent-green-500">
+                 Entrega para fora de Campina Grande (Valor de frete a definir!)
+            </label>
+        </div>
+
+        <p class="text-red-500 hidden mt-1" id="delivery-warn">
+            Selecione uma forma de entrega!
+        </p>
             <div class="flex items-center justify-between mt-5 w-full">
                 <button id="close-modal-btn" class="bg-gray-200 px-4 py-1 rounded">Fechar</button>
                 <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
@@ -197,7 +235,7 @@
         <h2 class="text-center font-bold text-2xl mb-2">Escolha a forma de pagamento</h2>
         <div class="flex flex-col gap-4">
 
-            <button class="bg-gray-900 text-white px-4 py-2 rounded payment-option" id="checkout-pix"> Pagar com Pix</button>
+            <button class="bg-gray-900 text-white px-4 py-2 rounded payment-option" id="checkout-pix"> Pagar pelo Whatsapp</button>
             <button class="bg-gray-900 text-white px-4 py-2 rounded payment-option" id="checkout-stripe">Pagar com Cartão</button>
         </div>
         <div class="flex items-center justify-center mt-5 w-full">
