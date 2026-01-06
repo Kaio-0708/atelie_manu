@@ -139,7 +139,6 @@ npm install
  3. Configurar Variáveis de Ambiente
 Crie um arquivo .env na raiz do projeto com base no exemplo:
 
-bash
 ```
 cp .env.example .env
 ```
@@ -161,9 +160,9 @@ No terminal, execute:
 node api/server.js
 ```
 O servidor será iniciado em:
-
+```
 http://localhost:3000
-
+```
  6. Executar o Frontend
 O frontend é composto por arquivos estáticos dentro da pasta public.
 
@@ -182,21 +181,21 @@ Selecione Open with Live Server
 
  7. Fluxo de Teste Recomendado
 
-Adicione produtos ao carrinho
+- Adicione produtos ao carrinho
 
-Selecione tamanho
+- Selecione tamanho
 
-Escolha forma de entrega
+- Escolha forma de entrega
 
-Finalize o pedido
+- Finalize o pedido
 
-Teste:
+- Teste:
 
-Pagamento com cartão
+- Pagamento com cartão
 
-Pagamento via PIX (WhatsApp)
+- Pagamento via PIX (WhatsApp)
 
-Verifique o pedido salvo no Firebase
+- Verifique o pedido salvo no Firebase
 
 ## Autor
 
