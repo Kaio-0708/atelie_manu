@@ -120,7 +120,7 @@ Antes de começar, você precisa ter instalado na sua máquina:
 
 ---
 
-##  1. Clonar o Repositório
+  1. Clonar o Repositório
 
 Abra o terminal e execute:
 
@@ -130,6 +130,7 @@ git clone https://github.com/Kaio-0708/atelie_manu.git
 
 cd atelie_manu
  2. Instalar as Dependências
+ 
 Instale as dependências do projeto:
 
 
@@ -137,6 +138,7 @@ Instale as dependências do projeto:
 npm install
 ```
  3. Configurar Variáveis de Ambiente
+    
 Crie um arquivo .env na raiz do projeto com base no exemplo:
 
 ```
@@ -153,6 +155,7 @@ Nunca versionar o arquivo .env. Ele contém informações sensíveis.
 
  4. Configurar o Firebase
  5. Iniciar o Backend
+    
 O backend está localizado na pasta api.
 
 No terminal, execute:
@@ -164,6 +167,7 @@ O servidor será iniciado em:
 http://localhost:3000
 ```
  6. Executar o Frontend
+    
 O frontend é composto por arquivos estáticos dentro da pasta public.
 
 Você pode executar de duas formas:
