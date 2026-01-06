@@ -102,3 +102,102 @@ Escalável: Estrutura pronta para crescer com novas funcionalidades.
 Integração Real: Conectado a serviços líderes de mercado (Stripe e Firebase).
 
 Produção: Sistema validado em uso real.
+
+##  Como Executar o Projeto Localmente
+
+Siga os passos abaixo para rodar o **Manu Ateliê** em ambiente local para desenvolvimento ou testes.
+
+---
+
+##  Pré-requisitos
+
+Antes de começar, você precisa ter instalado na sua máquina:
+
+- **Node.js** (versão 18 ou superior)
+- **npm** (gerenciador de pacotes do Node)
+- Uma conta no **Stripe**
+- Uma conta no **Firebase**
+
+---
+
+##  1. Clonar o Repositório
+
+Abra o terminal e execute:
+
+```
+git clone https://github.com/Kaio-0708/atelie_manu.git
+ ```
+
+cd atelie_manu
+ 2. Instalar as Dependências
+Instale as dependências do projeto:
+
+
+```
+npm install
+```
+ 3. Configurar Variáveis de Ambiente
+Crie um arquivo .env na raiz do projeto com base no exemplo:
+
+bash
+```
+cp .env.example .env
+```
+Preencha o arquivo .env com suas credenciais:
+
+env
+```
+STRIPE_SECRET_KEY=sk_test_sua_chave_aqui
+```
+Importante:
+Nunca versionar o arquivo .env. Ele contém informações sensíveis.
+
+ 4. Configurar o Firebase
+ 5. Iniciar o Backend
+O backend está localizado na pasta api.
+
+No terminal, execute:
+```
+node api/server.js
+```
+O servidor será iniciado em:
+
+http://localhost:3000
+
+ 6. Executar o Frontend
+O frontend é composto por arquivos estáticos dentro da pasta public.
+
+Você pode executar de duas formas:
+
+ Opção 1 — Abrir diretamente no navegador
+text
+
+/public/index.html
+ Opção 2 — Usar Live Server (recomendado)
+Instale a extensão Live Server no VS Code
+
+Clique com o botão direito em index.html
+
+Selecione Open with Live Server
+
+ 7. Fluxo de Teste Recomendado
+
+Adicione produtos ao carrinho
+
+Selecione tamanho
+
+Escolha forma de entrega
+
+Finalize o pedido
+
+Teste:
+
+Pagamento com cartão
+
+Pagamento via PIX (WhatsApp)
+
+Verifique o pedido salvo no Firebase
+
+## Autor
+
+Kaio Vitor - [GitHub](https://github.com/Kaio-0708)
