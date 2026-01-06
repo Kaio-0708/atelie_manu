@@ -128,7 +128,10 @@ Abra o terminal e execute:
 git clone https://github.com/Kaio-0708/atelie_manu.git
  ```
 
+```
 cd atelie_manu
+```
+
  2. Instalar as Dependências
  
 Instale as dependências do projeto:
