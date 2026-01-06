@@ -171,7 +171,9 @@ Você pode executar de duas formas:
  Opção 1 — Abrir diretamente no navegador
 text
 
+```
 /public/index.html
+ ```
  Opção 2 — Usar Live Server (recomendado)
 Instale a extensão Live Server no VS Code
 
