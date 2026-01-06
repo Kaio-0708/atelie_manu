@@ -27,30 +27,33 @@ O fluxo de dados segue uma arquitetura unidirecional e segura:
 Frontend (HTML/CSS/JS) → Backend (Node.js + Express) → Stripe / Firebase / WhatsApp
 
 ## Tecnologias Utilizadas
-Backend
-Node.js (Runtime environment)
+Backend:
 
-Express (Framework web)
+Node.js
 
-Stripe API (Processamento de pagamentos)
+Express
 
-dotenv (Gerenciamento de variáveis de ambiente)
+Stripe API
 
-CORS (Segurança de requisições)
+dotenv
 
-Frontend
-HTML5 (Estrutura semântica)
+CORS
 
-CSS3 (Estilização com Tailwind CSS)
+Frontend:
 
-JavaScript (Vanilla JS - sem frameworks)
+HTML5
 
-Serviços Externos
-Stripe (Pagamento com cartão de crédito)
+CSS3 (Tailwind CSS)
 
-Firebase Firestore (Banco de dados NoSQL para pedidos)
+JavaScript (Vanilla JS)
 
-WhatsApp (API/Link para fluxo de pagamento via PIX)
+Serviços Externos:
+
+Stripe (pagamento com cartão)
+
+Firebase Firestore (armazenamento de pedidos)
+
+WhatsApp (fluxo de pagamento via PIX)
 
 ## Funcionalidades Implementadas
  Carrinho de Compras
