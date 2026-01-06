@@ -27,7 +27,7 @@ O fluxo de dados segue uma arquitetura unidirecional e segura:
 Frontend (HTML/CSS/JS) → Backend (Node.js + Express) → Stripe / Firebase / WhatsApp
 
 ## Tecnologias Utilizadas
-Backend:
+### Backend:
 
 Node.js
 
@@ -39,7 +39,7 @@ dotenv
 
 CORS
 
-Frontend:
+### Frontend:
 
 HTML5
 
@@ -47,7 +47,7 @@ CSS3 (Tailwind CSS)
 
 JavaScript (Vanilla JS)
 
-Serviços Externos:
+### Serviços Externos:
 
 Stripe (pagamento com cartão)
 
